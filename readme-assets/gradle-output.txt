@@ -1,0 +1,60 @@
+Running 'gradlew :app:assembleDebug' in /home/expo/workingdir/build/android
+Welcome to Gradle 8.3!
+Here are the highlights of this release:
+- Faster Java compilation
+ - Reduced memory usage
+- Support for running on Java 20
+For more details see https://docs.gradle.org/8.3/release-notes.html
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+> Configure project :
+Path for java installation '/usr/lib/jvm/openjdk-17' (Common Linux Locations) does not contain a java executable
+> Task :expo-dev-launcher-gradle-plugin:pluginDescriptors
+> Task :expo-dev-launcher-gradle-plugin:processResources
+> Task :gradle-plugin:pluginDescriptors
+> Task :gradle-plugin:processResources
+> Task :expo-dev-launcher-gradle-plugin:compileKotlin
+> Task :expo-dev-launcher-gradle-plugin:compileJava NO-SOURCE
+> Task :expo-dev-launcher-gradle-plugin:classes
+> Task :expo-dev-launcher-gradle-plugin:jar
+> Task :expo-dev-launcher-gradle-plugin:inspectClassesForKotlinIC
+> Task :gradle-plugin:compileKotlin
+> Task :gradle-plugin:compileJava
+NO-SOURCE
+> Task :gradle-plugin:classes
+> Task :gradle-plugin:jar
+> Task :gradle-plugin:inspectClassesForKotlinIC
+> Configure project :app
+ℹ️  Applying gradle plugin 'expo-dev-launcher-gradle-plugin' (expo-dev-launcher@3.6.10)
+Path for java installation '/usr/lib/jvm/openjdk-17' (Common Linux Locations) does not contain a java executable
+FAILURE: Build completed with 2 failures.
+1: Task failed with an exception.
+-----------
+* Where:
+Script '/home/expo/workingdir/build/node_modules/expo-modules-core/android/ExpoModulesCorePlugin.gradle' line: 40
+* What went wrong:
+A problem occurred evaluating project ':expo-shazamkit'.
+> Failed to apply plugin class 'KotlinExpoModulesCorePlugin'.
+   > Could not find method android() for arguments [KotlinExpoModulesCorePlugin$_apply_closure4@4e2f28b9] on project ':expo-shazamkit' of type org.gradle.api.Project.
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+2: Task failed with an exception.
+-----------
+* Where:
+Script '/home/expo/workingdir/build/node_modules/expo-modules-core/android/ExpoModulesCorePlugin.gradle' line: 76
+* What went wrong:
+A problem occurred configuring project ':expo'.
+> Could not get unknown property 'release' for SoftwareComponent container of type org.gradle.api.internal.component.DefaultSoftwareComponentContainer.
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+BUILD FAILED in 1m 22s
+10 actionable tasks: 10 executed
+Error: Gradle build failed with unknown error. See logs for the "Run gradlew" phase for more information.
