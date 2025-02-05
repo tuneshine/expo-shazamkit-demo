@@ -13,7 +13,12 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tuneshine.expo-shazamkit-demo",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Microphone required to run Shazam",
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -23,6 +28,28 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "07154e47-1d9e-4f6d-9a53-23567808abdb"
+      }
+    },
+    "owner": "tobobo",
+    "plugins": [
+      [
+        "expo-shazamkit",
+        {
+          "microphonePermission": "Microphone required to run Shazam"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "15.0"
+          }
+        }
+      ]
+    ]
   }
 }
