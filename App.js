@@ -33,8 +33,8 @@ export default function App() {
         }
       }} />
       {listening && <Text>Listening...</Text>}
-      {expoShazamResult && <Text style={styles.pre}>{JSON.stringify(expoShazamResult, null, 2)}</Text>}
-      {expoShazamError && <Text style={[styles.pre, { color: 'red' }]}>{expoShazamError.message}</Text>}
+      {expoShazamResult && <Text>{JSON.stringify(expoShazamResult, null, 2)}</Text>}
+      {expoShazamError && <Text style={{ color: 'red' }}>{expoShazamError.message}</Text>}
     </SafeAreaView>
   );
 }
@@ -45,9 +45,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'flex-start',
-  },
-  pre: {
-    whiteSpace: 'pre',
-    fontFamily: 'monospace',
   },
 });
